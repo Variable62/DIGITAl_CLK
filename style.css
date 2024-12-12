@@ -1,0 +1,47 @@
+*, *::before, *::after {
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: radial-gradient(#121212,#000);
+    color: #ffff;
+    line-height: 7em;
+}
+.clock-box {
+    padding : 4em 6em;
+    background-image: linear-gradient(70deg, #2d54d3, #4c071d);
+    border-radius: 50% 50% 80% 50%;
+    animation: bgblob 6s infinite 0.5s;
+}
+.clock {
+    font-size: 7em;
+}
+.date {
+    font-size: 2em;
+}
+.clock, 
+.date {
+    text-shadow: 0 5px 5px #000;
+}
+
+@keyframes bgblob {
+    0% {
+        border-radius: 50% 50% 80% 50%;
+    }
+    50% {
+        border-radius: 60% 70% 40% 100%;
+    }
+    100% {
+        border-radius: 50% 50% 80% 50%;
+    }
+}
